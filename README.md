@@ -1,7 +1,7 @@
 # Tesla Stock Price Prediction
 Predicting Tesla's (TSLA) adjusted close prices over a time range using LSTM (PyTorch) without Twitter sentiment analysis and with Twitter sentiment analysis included (NLP).
 
-In 1_TSLA_Stock_Price_Prediction_Without_Sentiment_Analysis_Results.ipynb, adjusted close prices are predicted without sentiment analysis from Twitter on TSLA.
+In 1_TSLA_Stock_Price_Prediction_Without_Sentiment_Analysis_Results.ipynb, adjusted close prices are predicted without sentiment analysis from Twitter.
 
 In 2_TSLA_Cleaning_Twitter_Data.ipynb, tweets on TSLA are cleaned for processing.
 
