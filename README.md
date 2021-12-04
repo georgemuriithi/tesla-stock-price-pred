@@ -1,5 +1,5 @@
 # TSLA Stock Price Prediction
-Predicting TSLA's adjusted close prices over a time range using LSTM without Twitter sentiment analysis and with Twitter sentiment analysis included.
+Predicting TSLA's adjusted close prices over a time range using LSTM without Twitter sentiment analysis and with Twitter sentiment analysis included (NLP).
 
 In 1_TSLA_Stock_Price_Prediction_Without_Sentiment_Analysis_Results.ipynb, adjusted close prices are predicted without sentiment analysis from Twitter on TSLA.
 
