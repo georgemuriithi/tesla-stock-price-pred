@@ -45,7 +45,7 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 - `learning_rate=0.001`
 - `num_epochs=8000`
 
-*Resources leveraged from **Google Colab:** 2 CPUs, 1 GPU.*
+***GPU** is leveraged.*
 
 Results (**Mean Squared Error**):
 
@@ -96,7 +96,7 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 - `learning_rate=0.002`
 - `num_epochs=8000`
 
-*Resources leveraged from **Google Colab:** 2 CPUs, 1 GPU.*
+***GPU** is leveraged.*
 
 Results (**Mean Squared Error**):
 
