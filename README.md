@@ -33,6 +33,7 @@ The features are **normalized,** because an LSTM network is sensitive to the sca
 LSTM model **parameters:**
 
 - `input_size=5`
+- `batch_first=True`
 - `num_classes=1`
 - `optimizer=Adam`
 - `loss_function=MSELoss()`
