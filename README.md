@@ -102,3 +102,7 @@ Results (**Mean Squared Error**):
 - Training and Validation: **35.028627722561374**
 - Training: **0.11838243676105603**
 - Validation: **138.12294583219045**
+
+### Conclusion
+As we can see from the Mean Squared Error results of Prediction With and Without Sentiment Scores, adding the Sentiment Scores of tweets as a feature in the LSTM model improves its prediction accuracy.
+
