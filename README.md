@@ -40,12 +40,12 @@ LSTM model **parameters:**
 
 LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search Algorithm:
 
-*Resources leveraged from **Google Colab:** 2 CPUs, 1 GPU.*
-
 - `hidden_size=3`
 - `num_layers=1`
 - `learning_rate=0.001`
 - `num_epochs=8000`
+
+*Resources leveraged from **Google Colab:** 2 CPUs, 1 GPU.*
 
 Results (**Mean Squared Error**):
 
@@ -91,12 +91,12 @@ LSTM model **parameters:**
 
 LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search Algorithm:
 
-*Resources leveraged from **Google Colab:** 2 CPUs, 1 GPU.*
-
 - `hidden_size=5`
 - `num_layers=1`
 - `learning_rate=0.002`
 - `num_epochs=8000`
+
+*Resources leveraged from **Google Colab:** 2 CPUs, 1 GPU.*
 
 Results (**Mean Squared Error**):
 
@@ -106,4 +106,3 @@ Results (**Mean Squared Error**):
 
 ### Conclusion
 As we can see from the Mean Squared Error results of Prediction With and Without Sentiment Scores, adding the Sentiment Scores of tweets as a feature in the LSTM model improves its prediction accuracy.
-
