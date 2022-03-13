@@ -9,7 +9,7 @@ Predicting Tesla’s stock price over some months using an LSTM model. Tweets ab
 ***Disclaimer:** The LSTM model cannot be used to predict Tesla's stock price in real life. The stock market is highly unpredictable, therefore, prediction models do not work. In this project, the validation phase is used for analysis. The purpose of this project is to implement **Multivariate Time-Series Prediction using LSTM.***
 
 ## Problem Description
-In this project, we investigate the significance of tweets about a company, **Tesla, Inc.** in this case, in predicting its stock price. At first, we predict the stock price over some months using an **LSTM Multivariate Time-Series Prediction** model without including the sentiment scores of tweets. After that, we clean up the tweets and compute their daily average sentiment scores using **TextBlob.** Lastly, we include the sentiment scores as a feature in our LSTM model and predict the stock price.
+In this project, we investigate the significance of tweets about a company, **Tesla, Inc.** in this case, in predicting its stock price. First, we predict the stock price over some months using an **LSTM Multivariate Time-Series Prediction** model without including the sentiment scores of tweets. Then, we clean up the tweets and compute their daily average sentiment scores using **TextBlob.** Lastly, we include the sentiment scores as a feature in our LSTM model and predict the stock price.
 
 ### Data
 The csv files and model states can be accessed from the *data* folder.
