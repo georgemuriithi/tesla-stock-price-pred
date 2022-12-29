@@ -4,15 +4,17 @@
     <img alt="License" src="https://img.shields.io/github/license/georgemuriithi/tesla-stock-price-pred.svg?color=blue&cachedrop">
 </a>
 
-Predicting Tesla’s stock price over some months using an LSTM model. Tweets about Tesla are used to improve the prediction accuracy.
+Tesla’s stock price was predicted over some months using an LSTM model. Tweets about Tesla were used to improve prediction accuracy.
 
-***Disclaimer:** The LSTM model cannot be used to predict Tesla's stock price in real life. The stock market is highly unpredictable, therefore, prediction models do not work. In this project, the validation phase is used for analysis. The purpose of this project is to implement **Multivariate Time-Series Prediction using LSTM.***
+First, the stock price was predicted over some months using an **LSTM Multivariate Time-Series Prediction** model. Then, tweets about Tesla were cleaned and their daily average sentiment scores were computed using **TextBlob.** Lastly, the daily average sentiment scores were added as a feature in the LSTM model and used for prediction.
+
+***Disclaimer:** The LSTM model cannot be used to predict Tesla's stock price in real life. The stock market is highly unpredictable. Therefore, prediction models do not work. In this project, the validation phase is used to test the model's performance.*
 
 ## Problem Description
-In this project, we investigate the significance of tweets about a company, **Tesla, Inc.** in this case, in predicting its stock price. First, we predict the stock price over some months using an **LSTM Multivariate Time-Series Prediction** model without including the sentiment scores of tweets. Then, we clean up the tweets and compute their daily average sentiment scores using **TextBlob.** Lastly, we include the sentiment scores as a feature in our LSTM model and predict the stock price.
+The task was to investigate the impact of tweets about Tesla on its stock price.
 
 ### Data
-The csv files and model states can be accessed from the *data* folder.
+The csv files zip and model states can be accessed from the *data* folder.
 
 ## Solution Approach
 ### <a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/1-TSLA-Stock-Price-Prediction-Without-Sentiment-Scores.ipynb">Prediction Without Sentiment Scores</a>
@@ -20,7 +22,7 @@ The csv files and model states can be accessed from the *data* folder.
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-At first, we use the following as **features** and Adj Close price as the **response:**
+**Adj Close price** was used as the response and the following were used as the features:
 
 - High price
 - Low price
@@ -28,7 +30,7 @@ At first, we use the following as **features** and Adj Close price as the **resp
 - Close price
 - Volume
 
-The features are **normalized,** because an LSTM network is sensitive to the scale of data, then **converted to tensors.**
+The features were **normalized** because an LSTM model is sensitive to the scale of data and then **converted to tensors.**
 
 LSTM model **parameters:**
 
@@ -45,7 +47,7 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 - `learning_rate=0.001`
 - `num_epochs=8000`
 
-***GPU** is leveraged.*
+***GPU** was leveraged.*
 
 Results (**Mean Squared Error**):
 
