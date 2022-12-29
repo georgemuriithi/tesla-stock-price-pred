@@ -4,7 +4,7 @@
     <img alt="License" src="https://img.shields.io/github/license/georgemuriithi/tesla-stock-price-pred.svg?color=blue&cachedrop">
 </a>
 
-Tesla’s stock price was predicted over some months using an LSTM model. Tweets about Tesla were used to improve prediction accuracy.
+Tesla’s stock price was predicted over some months using an LSTM (Long Short-Term Memory) model. Tweets about Tesla were used to improve prediction accuracy.
 
 First, the stock price was predicted over some months using an **LSTM Multivariate Time-Series Prediction** model. Then, tweets about Tesla were cleaned and their daily average sentiment scores were computed using **TextBlob.** Lastly, the daily average sentiment scores were added as a feature in the LSTM model and used for prediction.
 
@@ -22,7 +22,7 @@ The csv files zip and model states can be accessed from the *data* folder.
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-**Adj Close price** was used as the response and the following were used as the features:
+*Adj Close price* was used as the **response** and the following were used as the **features:**
 
 - High price
 - Low price
