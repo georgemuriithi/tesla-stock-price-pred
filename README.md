@@ -49,7 +49,7 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 
 ***GPU** was leveraged.*
 
-Results (**Mean Squared Error**):
+**MSE (Mean Squared Error)** results:
 
 - Training and Validation: **108.98853599149807**
 - Training: **0.37573209398539453**
@@ -60,15 +60,16 @@ Results (**Mean Squared Error**):
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-The tweets are **cleaned** in the following ways:
+The tweets were **cleaned** in the following ways:
 
-- Adding whitespaces to the ends
+- Adding whitespaces to the ends (to join them)
+- Lowercasing
 - Removing http links
 - Removing special characters and numbers
-- Lowercasing
 - Removing stop words
+- Removing unnecessary words and characters
 
-After that, they are **lemmatized** and a **frequency analysis** is performed on the words.
+Then, they were **lemmatized** and a **frequency analysis** was performed on the words.
 
 ### <a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/3-Sentiment-Analysis-On-Cleaned-TSLA-Tweets.ipynb">Sentiment Analysis</a>
 <a href="https://colab.research.google.com/drive/1CUspmd06sUzBiiEife9YmuXX2OjWlLrp?usp=sharing">
