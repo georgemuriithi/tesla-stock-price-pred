@@ -107,5 +107,5 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 - Training: **0.11838243676105603**
 - Validation: **138.12294583219045**
 
-### Conclusion
+## Conclusion
 From the MSE results of Prediction Without and With Sentiment Scores, it was clear that adding the daily average sentiment scores of tweets as a feature to the LSTM model improved its prediction accuracy. This meant that tweets about Tesla had a level of impact on its stock price.
