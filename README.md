@@ -30,7 +30,7 @@ The csv files zip and model states can be accessed from the *data* folder.
 - Close price
 - Volume
 
-The features were **normalized** because an LSTM model is sensitive to the scale of data and then **converted to tensors.**
+The features were **normalized** because an LSTM model is sensitive to the scale of data, and then **converted to tensors.**
 
 LSTM model **parameters:**
 
@@ -62,28 +62,28 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 
 The tweets were **cleaned** in the following ways:
 
-- Adding whitespaces to the ends (to join them)
+- Adding whitespaces to the ends to join them
 - Lowercasing
 - Removing http links
 - Removing special characters and numbers
 - Removing stop words
 - Removing unnecessary words and characters
 
-Then, they were **lemmatized** and a **frequency analysis** was performed on the words.
+They were then **lemmatized**, and a **frequency analysis** was conducted on the words.
 
 ### <a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/3-Sentiment-Analysis-On-Cleaned-TSLA-Tweets.ipynb">Sentiment Analysis</a>
 <a href="https://colab.research.google.com/drive/1CUspmd06sUzBiiEife9YmuXX2OjWlLrp?usp=sharing">
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-**Sentiment scores** are calculated for each tweet using **TextBlob,** within the range [-1.0, 1.0], where -1.0 is a negative polarity and 1.0 is positive. A score of 0.0 refers to a neutral evaluation of the tweet. Afterwards, a **frequency analysis** is performed on the sentiment scores. Lastly, the **daily average sentiment scores** are computed and those that are 0.0 removed.
+**Sentiment scores** for the tweets were calculated using **TextBlob.** The polarity range was [-1.0, 1.0], with -1.0 as the most negative polarity and 1.0 as the most positive. 0.0 was neutral polarity. Then, a **frequency analysis** was conducted on the sentiment scores. Lastly, the **daily average sentiment scores** were computed.
 
 ### <a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/4-TSLA-Stock-Price-Prediction-With-Sentiment-Scores.ipynb">Prediction With Sentiment Scores</a>
 <a href="https://colab.research.google.com/drive/1w1OSOoh5ab2jB8S6Devm-o7zDMaXnMnj?usp=sharing">
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-Lastly, we add Sentiment Scores of tweets as a feature in our LSTM model.
+Finally, the daily average sentiment scores were added as a feature to our LSTM model.
 
 LSTM model **parameters:**
 
@@ -99,13 +99,13 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 - `learning_rate=0.002`
 - `num_epochs=8000`
 
-***GPU** is leveraged.*
+***GPU** was leveraged.*
 
-Results (**Mean Squared Error**):
+**MSE (Mean Squared Error)** results:
 
 - Training and Validation: **35.028627722561374**
 - Training: **0.11838243676105603**
 - Validation: **138.12294583219045**
 
 ### Conclusion
-As we can see from the Mean Squared Error results of Prediction With and Without Sentiment Scores, adding the Sentiment Scores of tweets as a feature in the LSTM model improves its prediction accuracy.
+From the MSE results of Prediction Without and With Sentiment Scores, it was clear that adding the daily average sentiment scores of tweets as a feature in the LSTM model improved its prediction accuracy.
