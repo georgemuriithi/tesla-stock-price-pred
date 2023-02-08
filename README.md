@@ -4,14 +4,14 @@
     <img alt="License" src="https://img.shields.io/github/license/georgemuriithi/tesla-stock-price-pred.svg?color=blue&cachedrop">
 </a>
 
-Tesla’s stock price was predicted over some months using an LSTM (Long Short-Term Memory) model. Tweets about Tesla were used to improve prediction accuracy.
+Tesla’s stock price is predicted over some months using an LSTM (Long Short-Term Memory) model. Tweets about Tesla are used to improve prediction accuracy.
 
-First, the stock price was predicted over some months using an **LSTM Multivariate Time-Series Prediction** model. Then, tweets about Tesla were cleaned and their daily average sentiment scores were computed using **TextBlob.** Lastly, the daily average sentiment scores were added as a feature in the LSTM model and used for prediction.
+First, the stock price is predicted over some months using an **LSTM Multivariate Time-Series Prediction** model. Then, tweets about Tesla are cleaned and their daily average sentiment scores are computed using **TextBlob.** Lastly, the daily average sentiment scores are added as a feature in the LSTM model and used for prediction.
 
-***Disclaimer:** The LSTM model cannot be used to predict stock prices in real life because the stock market is highly unpredictable. Prediction models do not work. In this project, the validation phase was used to test the model's performance. The purpose of the project was to implement Multivariate Time-Series Prediction using LSTM.*
+***Disclaimer:** The LSTM model cannot be used to predict stock prices in real life because the stock market is highly unpredictable. Prediction models do not work. In this project, the validation phase is used to test the model's performance. The purpose of the project is to implement Multivariate Time-Series Prediction using LSTM.*
 
 ## Problem Description
-The task was to investigate the impact of tweets about Tesla on its stock price.
+The task is to investigate the impact of tweets about Tesla on its stock price.
 
 ### Data
 The csv files zip and model states can be accessed from the *data* folder.
@@ -22,7 +22,7 @@ The csv files zip and model states can be accessed from the *data* folder.
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-*Adj Close price* was used as the **response** and the following were used as the **features:**
+*Adj Close price* is used as the **response** and the following are used as the **features:**
 
 - High price
 - Low price
@@ -30,7 +30,7 @@ The csv files zip and model states can be accessed from the *data* folder.
 - Close price
 - Volume
 
-The features were **normalized** because an LSTM model is sensitive to the scale of data, and then **converted to tensors.**
+The features are **normalized** because an LSTM model is sensitive to the scale of data, and then **converted to tensors.**
 
 LSTM model **parameters:**
 
@@ -47,7 +47,7 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 - `learning_rate=0.001`
 - `num_epochs=8000`
 
-***GPU** was leveraged.*
+***GPU** is leveraged.*
 
 **MSE (Mean Squared Error)** results:
 
@@ -60,7 +60,7 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-The tweets were **cleaned** in the following ways:
+The tweets are **cleaned** in the following ways:
 
 - Adding whitespaces to the ends to join them
 - Lowercasing
@@ -69,21 +69,21 @@ The tweets were **cleaned** in the following ways:
 - Removing stop words
 - Removing unnecessary words and characters
 
-They were then **lemmatized**, and a **frequency analysis** was conducted on the words.
+They are then **lemmatized**, and a **frequency analysis** is conducted on the words.
 
 ### <a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/3-Sentiment-Analysis-On-Cleaned-TSLA-Tweets.ipynb">Sentiment Analysis</a>
 <a href="https://colab.research.google.com/drive/1CUspmd06sUzBiiEife9YmuXX2OjWlLrp?usp=sharing">
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-**Sentiment scores** for the tweets were calculated using **TextBlob.** The polarity range was [-1.0, 1.0], with -1.0 as the most negative polarity and 1.0 as the most positive. 0.0 was neutral polarity. Then, a **frequency analysis** was conducted on the sentiment scores. Lastly, the **daily average sentiment scores** were computed.
+**Sentiment scores** for the tweets are calculated using **TextBlob.** The polarity range is [-1.0, 1.0], with -1.0 as the most negative polarity and 1.0 as the most positive. 0.0 is neutral polarity. Then, a **frequency analysis** is conducted on the sentiment scores. Lastly, the **daily average sentiment scores** are computed.
 
 ### <a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/4-TSLA-Stock-Price-Prediction-With-Sentiment-Scores.ipynb">Prediction With Sentiment Scores</a>
 <a href="https://colab.research.google.com/drive/1w1OSOoh5ab2jB8S6Devm-o7zDMaXnMnj?usp=sharing">
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-Finally, the daily average sentiment scores were added as a feature to our LSTM model.
+Finally, the daily average sentiment scores are added as a feature to our LSTM model.
 
 LSTM model **parameters:**
 
@@ -99,7 +99,7 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 - `learning_rate=0.002`
 - `num_epochs=8000`
 
-***GPU** was leveraged.*
+***GPU** is leveraged.*
 
 **MSE (Mean Squared Error)** results:
 
@@ -108,4 +108,4 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
 - Validation: **138.12294583219045**
 
 ## Conclusion
-From the MSE results of Prediction Without and With Sentiment Scores, it was clear that adding the daily average sentiment scores of tweets as a feature to the LSTM model improved its prediction accuracy. This meant that tweets about Tesla had a level of impact on its stock price.
+From the MSE results of Prediction Without and With Sentiment Scores, it is clear that adding the daily average sentiment scores of tweets as a feature to the LSTM model improves its prediction accuracy. This means that tweets about Tesla have a level of impact on its stock price.
