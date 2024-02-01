@@ -8,13 +8,13 @@ Tesla’s stock price is predicted over some months using an LSTM (Long Short-Te
 
 First, the stock price is predicted over some months using an **LSTM Multivariate Time-Series Prediction** model. Then, tweets about Tesla are cleaned and their daily average sentiment scores are computed using **TextBlob.** Lastly, the daily average sentiment scores are added as a feature in the LSTM model and used for prediction.
 
-***Disclaimer:** The LSTM model cannot be used to predict stock prices in real life because the stock market is highly unpredictable. Prediction models do not work. In this project, the validation phase is used to test the model's performance. The purpose of the project is to implement Multivariate Time-Series Prediction using LSTM.*
+***Disclaimer:** The LSTM model cannot be used to predict stock prices in real life because the stock market is highly unpredictable. In this project, the validation phase is used to test the model's performance. The purpose of the project is to implement Multivariate Time-Series Prediction using LSTM.*
 
 ## Problem Description
 The task is to investigate the impact of tweets about Tesla on its stock price.
 
 ### Data
-The csv files zip and model states can be accessed from the *data* folder.
+The csvs zip file and model states can be accessed from the *data* folder.
 
 ## Solution Approach
 ### <a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/1-TSLA-Stock-Price-Prediction-Without-Sentiment-Scores.ipynb">Prediction Without Sentiment Scores</a>
@@ -22,7 +22,7 @@ The csv files zip and model states can be accessed from the *data* folder.
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-*Adj Close price* is used as the **response** and the following are used as the **features:**
+*Adj close price* is used as the **response** and the following are used as the **features:**
 
 - High price
 - Low price
@@ -60,7 +60,7 @@ LSTM model **hyperparameters** after tuning with **Ray Tune** using Grid Search 
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-The tweets are **cleaned** in the following ways:
+The tweets are **cleaned** and **pre-processed** in the following ways:
 
 - Adding whitespaces to the ends to join them
 - Lowercasing
@@ -76,7 +76,7 @@ They are then **lemmatized**, and a **frequency analysis** is conducted on the w
     <img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
 </a>
 
-**Sentiment scores** for the tweets are calculated using **TextBlob.** The polarity range is [-1.0, 1.0], with -1.0 as the most negative polarity and 1.0 as the most positive. 0.0 is neutral polarity. Then, a **frequency analysis** is conducted on the sentiment scores. Lastly, the **daily average sentiment scores** are computed.
+**Sentiment scores** for the tweets are calculated using **TextBlob.** The polarity range is [-1.0, 1.0], with -1.0 as the most negative polarity, 1.0 as the most positive polarity and 0.0 as the neutral polarity. Then, a **frequency analysis** is conducted on the sentiment scores. Lastly, the **daily average sentiment scores** are computed.
 
 ### <a href="https://github.com/georgemuriithi/tesla-stock-price-pred/blob/main/4-TSLA-Stock-Price-Prediction-With-Sentiment-Scores.ipynb">Prediction With Sentiment Scores</a>
 <a href="https://colab.research.google.com/drive/1w1OSOoh5ab2jB8S6Devm-o7zDMaXnMnj?usp=sharing">
